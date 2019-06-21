@@ -1,12 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import items from "../data";
+import { NavLink } from "react-router-dom";
 
 export default function(props) {
   return (
     <div className="items-list-wrapper">
-      {items.map(item => (
-        <Link to={`/trinket/${item.id}`} className="item-card" key={item.id}>
+      {props.data.map(item => (
+        <NavLink to={`/trinket/${item.id}`} className="item-card" key={item.id}>
           <img
             className="item-list-image"
             src={item.imageUrl}
@@ -15,7 +14,7 @@ export default function(props) {
 
           <p>{item.name}</p>
           <p>${item.price}</p>
-        </Link>
+        </NavLink>
       ))}
     </div>
   );

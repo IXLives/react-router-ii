@@ -1,8 +1,7 @@
 import React from "react";
-import items from "../data";
 
 export default function(props) {
-  const item = items.find(i => String(i.id) === props.match.params.id);
+  const item = props.data.find(i => String(i.id) === props.match.params.id);
 
   return (
     <div className="item-wrapper">
