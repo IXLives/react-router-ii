@@ -23,7 +23,7 @@ class App extends React.Component {
           render={props => <Home {...props} data = {data}/>} />
         <Route exact path="/trinkets" 
           render = {props => <Trinkets {...props} data = {data}/>} />
-        <Route exact path="/trinket/:id" 
+        <Route path="/trinket/:id" 
           render = {props => <Trinket {...props} data = {data}/>} />
       </div>
     );

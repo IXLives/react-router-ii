@@ -1,4 +1,7 @@
 import React from "react";
+import {Route, NavLink} from 'react-router-dom';
+import Description from './Description';
+import Shipping from './Shipping';
 
 export default function(props) {
   const item = props.data.find(i => String(i.id) === props.match.params.id);
@@ -15,7 +18,14 @@ export default function(props) {
           <h4>${item.price}</h4>
         </div>
       </div>
-      <p className="item-description">{item.description}</p>
+
+      <nav>
+        <NavLink to = {`/trinket/${props.match.params.id}`}>Description</NavLink>
+        <NavLink to = {`/trinket/${props.match.params.id}/shipping`}>Shipping</NavLink>
+      </nav>
+
+      <Route path = '/trinket/:id/shipping' render = {() => <Shipping shipping = {item.shipping}/>} />
+      <Route exact path = '/trinket/:id' render = {() => <Description description = {item.description}/>} />
     </div>
   );
 }
