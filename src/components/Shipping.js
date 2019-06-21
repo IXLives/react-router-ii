@@ -1,7 +1,5 @@
 import React from 'react';
 
-function Shipping(props) {
+export default function(props) {
     return (<p className = 'item-description'>{props.shipping}</p>)
 }
-
-export default Shipping;

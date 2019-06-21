@@ -14,6 +14,14 @@ body,
   width: 100%;
 }
 
+.randomButton {
+  color: white;
+  padding: 10px;
+  background: #1c5d76;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -21,6 +29,19 @@ nav {
   padding: 0 16px;
   border-bottom: 1px solid #efefef;
   margin-bottom: 32px;
+}
+
+.trinket-nav a{
+  padding: 5px;
+  color: blue;
+  text-decoration: none;
+}
+
+.trinket-nav a.active {
+  padding: 5px;
+  color: white;
+  background: blue;
+  border-radius: 5px;
 }
 
 .nav-links {

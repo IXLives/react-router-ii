@@ -1,7 +1,5 @@
 import React from 'react';
 
-function Description(props) {
+export default function(props) {
     return (<p className="item-description">{props.description}</p>)
 }
-
-export default Description;
